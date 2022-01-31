@@ -1,0 +1,41 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "banner-carousel-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/bannerCarousel/BannerCarouselWebPart.js",
+          "manifest": "./src/webparts/bannerCarousel/BannerCarouselWebPart.manifest.json"
+        }
+      ]
+    },
+    "calendario-fusd-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/calendarioFusd/CalendarioFusdWebPart.js",
+          "manifest": "./src/webparts/calendarioFusd/CalendarioFusdWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "jquery": {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js",
+      "globalName": "jQuery"
+    },
+    "fullcalendar": {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js",
+      "globalName": "jQuery",
+      "globalDependencies": [
+        "jquery"
+      ]
+    }
+  },
+  "localizedResources": {
+    "CalendarioFusdWebPartStrings": "lib/webparts/calendarioFusd/loc/{locale}.js",
+    "BannerCarouselWebPartStrings": "lib/webparts/bannerCarousel/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}
